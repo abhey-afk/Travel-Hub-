@@ -1,86 +1,146 @@
-<div align='center'><img style="width:30%" src='https://user-images.githubusercontent.com/105128267/218077760-5694a4ac-4e37-4de7-b31f-268ccd27400a.png'/></div>
+# Travel Hub 🚗
 
-# About the project
+A modern car rental web application built with MERN stack (MongoDB, Express.js, React.js, Node.js) that allows users to rent cars easily and efficiently.
 
-  <p>A <b>car rental</b> website is an online platform that allows users to rent cars for personal or business use. The website provides an easy-to-use interface for searching, comparing, and reserving cars from a wide selection of vehicles that vary in make, model, size, and price.</p>
+## 🌟 Features
 
-👉 Live Demo: <a href='https://bookcar-rho.vercel.app/'>Live Demo
+- **User Authentication**
+  - Sign up/Sign in functionality
+  - User profile management
 
-<h3>Build with:</h3>
+- **Car Rental Features**
+  - Browse available cars
+  - Filter cars by various criteria
+  - Make reservations
+  - View booking history
+  - Real-time availability updates
 
-» Sass / Scss <br>
-» React JS
+- **Modern UI/UX**
+  - Responsive design
+  - Interactive car selection
+  - User-friendly booking process
+  - Beautiful car showcase
+  - Testimonials section
 
+## 🛠️ Tech Stack
 
+### Frontend
+- React.js
+- SCSS for styling
+- React Router for navigation
+- Context API for state management
 
-# React Project Setup
+### Backend
+- Node.js
+- Express.js
+- MongoDB
+- JWT for authentication
 
-This guide provides instructions to set up and run a React project on your local machine. The project also includes Sass as a dependency for styling.
+## 🚀 Getting Started
 
-## Prerequisites
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB
+- Git
 
-Before you begin, ensure that you have the following installed on your machine:
+### Installation
 
--   Node.js (v12 or later)
--   npm (Node Package Manager, comes with Node.js)
-
-## Installation
-
-1.  Clone the project repository to your local machine using Git:
-    ```
-     git clone <repository_url>` 
-    ```
-2.  Navigate to the project directory:
-    
-    ```
-     cd <project_directory>
-    ``` 
-    
-3.  Install project dependencies by running the following command:
-    
-    ``` 
-     npm install
-    ```  
-    
-
-## Usage
-
-To run the React project locally, follow these steps:
-
-1.  Start the development server:
-
-    ``` 
-     npm start 
-    ``` 
-    This command will compile the project and start a local development server.
-    
-2.  Open your web browser and visit `http://localhost:3000`. The React application should be up and running.
-    
-
-## Styling with Sass
-
-This project uses Sass as a preprocessor for CSS. Sass files are located in the `src/styles/styles.sccs` directory. To compile Sass into CSS, follow these steps:
-
-1.  Run the following command in your project directory:
-    
+1. Clone the repository
+```bash
+git clone https://github.com/abhey-afk/Travel-Hub-.git
+cd Travel-Hub-
 ```
- npm run build-css
-``` 
 
+2. Install dependencies for backend
+```bash
+cd server
+npm install
+```
 
-This command will compile Sass files and generate corresponding CSS files in the `src/styles/styles.sccs` directory.
-    
-2.  Link the generated CSS files in your React components to apply the styles.
-    
+3. Set up environment variables for backend
+Create a `.env` file in the server directory with the following variables:
+```env
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
 
-## Additional Scripts
+4. Install dependencies for frontend
+```bash
+cd ../client
+npm install
+```
 
-The project includes additional scripts that you can run using the `npm run` command:
+5. Start the development servers
 
--   `test`: Run tests for the project.
--   `build`: Build the project for production.
--   `eject`: Eject the project configuration from create-react-app.
+For backend:
+```bash
+cd server
+npm start
+```
 
-## Conclusion
+For frontend:
+```bash
+cd client
+npm start
+```
 
-You should now have the React project set up on your local machine. Feel free to explore and modify the code to meet your requirements. If you encounter any issues, please refer to the project's documentation or seek support from the project's maintainers.
+The application will be available at `http://localhost:3000`
+
+## 📁 Project Structure
+
+```
+Travel-Hub/
+├── client/                 # Frontend React application
+│   ├── public/            # Public assets
+│   └── src/               # Source files
+│       ├── components/    # React components
+│       ├── pages/         # Page components
+│       ├── styles/        # SCSS styles
+│       └── images/        # Image assets
+│
+└── server/                # Backend Node.js application
+    ├── config/           # Configuration files
+    ├── controllers/     # Request handlers
+    ├── models/         # Database models
+    ├── routes/        # API routes
+    └── middleware/   # Custom middleware
+```
+
+## 🌐 API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login user
+
+### Cars
+- `GET /api/cars` - Get all cars
+- `GET /api/cars/:id` - Get specific car
+- `POST /api/cars/book` - Book a car
+
+### Bookings
+- `GET /api/bookings` - Get user bookings
+- `POST /api/bookings` - Create new booking
+- `PUT /api/bookings/:id` - Update booking
+- `DELETE /api/bookings/:id` - Cancel booking
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Authors
+
+- **Abhey** - *Initial work* - [abhey-afk](https://github.com/abhey-afk)
+
+## 🙏 Acknowledgments
+
+- Thanks to all contributors who helped in building this project
+- Special thanks to the open-source community for their invaluable resources
